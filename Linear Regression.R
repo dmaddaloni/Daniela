@@ -1,0 +1,5 @@
+plot(titanic$Age, titanic$Fare, main="Age & Fare Comparison", xlab = "Age", ylab="Fare")
+lm=lm(Fare~Age, data=titanic)
+coef(lm)
+abline(lm,lwd=3,col="red")
+hist(resid(lm), main = "Histogram of the Residuals", xlab = "Residuals")
